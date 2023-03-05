@@ -212,7 +212,7 @@ def split_data(df, target = None, include_cols = [], validation_split = None):
         x = df
     
     if len(include_cols) > 0:
-        print('Subsetting Columns')
+        print(f'Subsetting Columns {include_cols}')
         x = df[include_cols]
         
     if validation_split is None:

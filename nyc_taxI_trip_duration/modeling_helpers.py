@@ -62,6 +62,9 @@ def build_evaluate_model(model, df, select_cols, validation_split = 0.25, scale 
     """ Builds given model and returns performance metrics as specified globally.
     Steps: Split given dataset into train and test
     """
+
+    print(f'Building & Evaluating a {model}')
+    print('-----')
     
     # Split into train and validation
     x, y, xval, yval = dp.split_data(df, target = 'trip_duration', include_cols = select_cols, validation_split = validation_split)
@@ -72,16 +75,17 @@ def build_evaluate_model(model, df, select_cols, validation_split = 0.25, scale 
     # Fit model and Evaluate Predictions
     model.fit(x,y)
     preds = model.predict(xval)
-    print(model.score(x,y), model.score(xval,yval))
+    print(f'Model Scores: {model.score(x,y)}, {model.score(xval,yval)}')
     
     scores, pred_df = evaluate_predictions(actuals = yval, preds = preds)
         
     # Cross Validation
-    print('Performing CV')
+    print('Performing Cross Validation')
     x, y = dp.split_data(df, target = 'trip_duration', include_cols = select_cols)      
 
     cv_scores = cross_val_score(model, x, y, scoring = scorer)
     scores['cv_scores'] = cv_scores
     print(f'CV Mean RMSE: {cv_scores.mean()}, Std: {cv_scores.std()}')
+    print('-----')
     
     return scores, model, pred_df
