@@ -10,7 +10,7 @@ Projects:
 2. Big Mart Sales Prediction - Regression
 
 3. Churn Prediction - Classification
-4. House Prices - Regression
+4. [House Prices](./house_prices) - Regression
 
 
 
