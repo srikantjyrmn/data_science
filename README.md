@@ -6,7 +6,7 @@
 
 Projects:
 
-1. [NYC Taxi Trip Duration Prediction](./nyc_taxi_trip_duration) - Regression
+1. [NYC Taxi Trip Duration Prediction](./nyc_taxI_trip_duration) - Regression
 2. Big Mart Sales Prediction - Regression
 
 3. [Churn Prediction](./churn_prediction) - Classification
