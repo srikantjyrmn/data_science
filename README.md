@@ -9,7 +9,7 @@ Projects:
 1. [NYC Taxi Trip Duration Prediction](./nyc_taxi_trip_duration) - Regression
 2. Big Mart Sales Prediction - Regression
 
-3. Churn Prediction - Classification
+3. [Churn Prediction](./churn_prediction) - Classification
 4. [House Prices](./house_prices) - Regression
 
 
