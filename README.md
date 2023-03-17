@@ -16,4 +16,4 @@ Projects:
 
 Helpers:
 
-1. [Modeling Helpers](): Class to build and evaluate models on a dataset. Given a dataset, model and scorer, finds the optimum model after Hyperparameter Tuning and Feature Selection
+1. [Modeling Helpers](./modeling_helpers): Class to build and evaluate models on a dataset. Given a dataset, model and scorer, finds the optimum model after Hyperparameter Tuning and Feature Selection
